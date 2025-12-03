@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@theme {
+        --color-primary: #000000;
+        --color-secondary: #F0F0F0;
+}
+
+
+/* Body text font */
+.font-body {
+  font-family: var(--font-raleway), sans-serif;
+}
+
+/* Headings font */
+.font-heading {
+  font-family: var(--font-cormorant_garamond), serif;
+}
+
