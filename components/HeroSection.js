@@ -5,8 +5,8 @@ const HeroSection = () => {
     return (
         <>
             <main className='max-w-[1600px] mx-auto'>
-                <section className='flex items-center font-body px-16 bg-secondary h-[75vh]'>
-                    <div className='flex flex-col gap-5 w-1/2'>
+                <section className='flex items-stretch font-body px-16 bg-secondary'>
+                    <div className='flex flex-col gap-5 py-10 w-1/2'>
                         <h1 className='font-extrabold text-6xl uppercase'>Find Clothes <br /> that matches <br /> your style</h1>
                         <p className='w-10/12'>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
                         <button className='bg-primary text-white px-7 py-3 rounded-full w-48 hover:tracking-widest transition-all ease-in-out'>Shop Now</button>
@@ -25,13 +25,13 @@ const HeroSection = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="pt-9">
+                    <div className="flex justify-baseline">
                         <Image
                             src="/hero-section.png"
                             alt="Hero-Image"
                             width={800}
                             height={0}
-                            // className="w-full max-w-[988px] h-auto"
+                            className="w-full max-w-[988px]"
                         />
                     </div>
 
