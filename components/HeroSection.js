@@ -5,9 +5,9 @@ const HeroSection = () => {
     return (
         <>
             <main className='max-w-[1600px] mx-auto'>
-                <section className='flex items-stretch font-body px-16 bg-secondary'>
-                    <div className='flex flex-col gap-5 py-10 w-1/2'>
-                        <h1 className='font-extrabold text-6xl uppercase'>Find Clothes <br /> that matches <br /> your style</h1>
+                <section className='flex items-stretch font-body px-16 bg-secondary max-lg:flex max-lg:flex-col max-sm:px-7'>
+                    <div className='flex flex-col gap-5 py-10 w-1/2 max-lg:w-full'>
+                        <h1 className='font-extrabold text-6xl max-sm:text-5xl uppercase'>Find Clothes <br /> that matches <br /> your style</h1>
                         <p className='w-10/12'>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
                         <button className='bg-primary text-white px-7 py-3 rounded-full w-48 hover:tracking-widest transition-all ease-in-out'>Shop Now</button>
                         <div className='flex space-x-16 space-y-3 max-xl:flex-wrap'>
@@ -25,13 +25,13 @@ const HeroSection = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-baseline">
+                    <div className="flex flex-col justify-end">
                         <Image
                             src="/hero-section.png"
                             alt="Hero-Image"
                             width={800}
-                            height={0}
-                            className="w-full max-w-[988px]"
+                            height={1000}
+                            className="w-full h-auto object-contain"
                         />
                     </div>
 

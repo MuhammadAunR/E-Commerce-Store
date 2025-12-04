@@ -4,7 +4,7 @@ import React from 'react'
 const Navbar = () => {
     return (
         <>
-            <nav className='flex items-center justify-between py-7 max-w-[1600px] mx-auto px-16'>
+            <nav className='flex items-center justify-between py-7 max-w-[1600px] mx-auto px-16 max-sm:px-7'>
 
                 <section className='flex items-center justify-between gap-10'>
                     <div className='lg:hidden'><Menu strokeWidth={3} /></div>
