@@ -18,7 +18,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en"
+      // crosspilot=""
+      >
       <body className={`${cormorant_garamond.variable} ${raleway.variable} antialiased`}>
         {children}
       </body>

@@ -23,7 +23,7 @@ const MainCardSection = () => {
 
     return (
         <>
-            <main className='px-16 py-10'>
+            <main className='px-7 md:px-16 py-10'>
 
                 {/* New Arrivals */}
                 <div className='uppercase text-6xl font-body font-extrabold text-center py-20'>
