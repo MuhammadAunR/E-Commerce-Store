@@ -1,4 +1,5 @@
 import { Menu, Search, ShoppingCart, UserRound } from 'lucide-react'
+import Link from 'next/link'
 import React from 'react'
 
 const Navbar = () => {
@@ -8,12 +9,24 @@ const Navbar = () => {
 
                 <section className='flex items-center justify-between gap-10'>
                     <div className='lg:hidden'><Menu strokeWidth={3} /></div>
-                    <div className="logo text-3xl font-black uppercase font-heading ">Shop.CO</div>
+                    <Link href={'/'} className="logo text-3xl font-black uppercase font-heading ">Shop.CO</Link>
                     <div className='flex items-center list-none gap-7 text-lg font-body max-lg:hidden'>
-                        <li className='cursor-pointer'>Shop</li>
-                        <li className='cursor-pointer'>On Site</li>
-                        <li className='cursor-pointer'>New Arrival</li>
-                        <li className='cursor-pointer'>Brands</li>
+                        <li className="relative cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-black after:origin-bottom after:scale-y-0 after:transition-transform after:duration-300 hover:after:scale-y-100">
+                            Shop
+                        </li>
+
+                        <li className="relative cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-black after:origin-bottom after:scale-y-0 after:transition-transform after:duration-300 hover:after:scale-y-100">
+                            On Sale
+                        </li>
+
+                        <li className="relative cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-black after:origin-bottom after:scale-y-0 after:transition-transform after:duration-300 hover:after:scale-y-100">
+                            New Arrival
+                        </li>
+
+                        <li className="relative cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-black after:origin-bottom after:scale-y-0 after:transition-transform after:duration-300 hover:after:scale-y-100">
+                            Brands
+                        </li>
+
                     </div>
                 </section>
 
