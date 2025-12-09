@@ -26,10 +26,10 @@ const MainCardSection = () => {
             <main className='px-7 md:px-16 py-10'>
 
                 {/* New Arrivals */}
-                <div className='uppercase text-6xl font-body font-extrabold text-center py-20'>
+                <div className='uppercase text-6xl font-body font-extrabold text-center py-10'>
                     New Arrivals
                 </div>
-                <section className='flex justify-center gap-x-5 gap-y-7 flex-wrap'>
+                <section className='flex justify-center gap-5 flex-wrap'>
                     {images.slice(0, 4).map((item, index) => {
                         return <div key={index} className="card hover:bg-secondary/50 transition-colors ease-in-out rounded-xl">
                             <div className='ring-1 ring-primary/50 w-[300px] rounded-xl overflow-hidden'>
@@ -49,10 +49,10 @@ const MainCardSection = () => {
 
 
                 {/* Top Selling  */}
-                <div className='uppercase text-6xl font-body font-extrabold text-center py-20'>
+                <div className='uppercase text-6xl font-body font-extrabold text-center py-10'>
                     Top Selling
                 </div>
-                <section className='flex justify-center gap-x-5 gap-y-7 flex-wrap'>
+                <section className='flex justify-center gap-5 flex-wrap'>
                     {images2.slice(0, 4).map((item, index) => {
                         return <div key={index} className="card hover:bg-secondary/50 transition-colors ease-in-out rounded-xl">
                             <div className='ring-1 ring-primary/50 w-[300px] rounded-xl overflow-hidden'>

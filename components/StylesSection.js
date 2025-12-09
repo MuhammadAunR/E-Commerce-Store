@@ -4,7 +4,7 @@ import React from 'react'
 const StylesSection = () => {
     return (
         <>
-            <main className='px-7 md:px-16 pt-10'>
+            <main className='px-7 md:px-16'>
                 <section className='bg-secondary h-fit py-7 rounded-2xl'>
                     <div className='uppercase text-5xl lg:text-6xl font-body font-extrabold text-center py-7 max-md:px-7'>Browse by dress style</div>
                     <div className="flex flex-col gap-4 px-5 md:px-20 mt-5">

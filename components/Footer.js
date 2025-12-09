@@ -37,7 +37,6 @@ const Footer = () => {
     const cardToShow = 3;
     const maxIndex = customerReviews.length - cardToShow;
 
-
     const next = () => {
         if (current < maxIndex) setCurrent(current + 1)
     }
@@ -49,10 +48,9 @@ const Footer = () => {
     return (
         <>
             <main>
-
                 {/* Customer Review Section  */}
-                <section className='pt-7'>
-                    <div className='flex items-baseline justify-between px-7 md:px-16 mt-5'>
+                <section className=''>
+                    <div className='flex items-baseline justify-between px-7 md:px-16 mt-10'>
                         <div className='uppercase text-4xl md:text-5xl lg:text-6xl font-body font-extrabold'>Our Happy Customers</div>
                         <div className='flex gap-2 bg-secondary py-1 px-3 rounded-2xl'>
                             <ArrowLeft
@@ -114,7 +112,7 @@ const Footer = () => {
                                             We have clothes that suits your style and which you're proud to wear. From women to men.
                                         </p>
                                         <div className="flex gap-3">
-                                            <Link target='_blank' href={'www.linkedin.com/in/muhammad-aun-rasheed-45a177301'}>
+                                            <Link target='_blank' href={'https://www.linkedin.com/in/muhammad-aun-rasheed-45a177301/'}>
                                                 <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors cursor-pointer">
                                                     <Linkedin className="w-5 h-5" />
                                                 </div>

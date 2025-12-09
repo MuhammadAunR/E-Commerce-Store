@@ -11,9 +11,11 @@ const Navbar = () => {
                     <div className='lg:hidden'><Menu strokeWidth={3} /></div>
                     <Link href={'/'} className="logo text-3xl font-black uppercase font-heading ">Shop.CO</Link>
                     <div className='flex items-center list-none gap-7 text-lg font-body max-lg:hidden'>
-                        <li className="relative cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-black after:origin-bottom after:scale-y-0 after:transition-transform after:duration-300 hover:after:scale-y-100">
-                            Shop
-                        </li>
+                        <Link href={'/shop'}>
+                            <li className="relative cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-black after:origin-bottom after:scale-y-0 after:transition-transform after:duration-300 hover:after:scale-y-100">
+                                Shop
+                            </li>
+                        </Link>
 
                         <li className="relative cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-black after:origin-bottom after:scale-y-0 after:transition-transform after:duration-300 hover:after:scale-y-100">
                             On Sale
