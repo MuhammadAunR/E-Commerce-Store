@@ -1,5 +1,6 @@
 import { Cormorant_Garamond, Raleway } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const cormorant_garamond = Cormorant_Garamond({
   variable: "--font-cormorant_garamond",
@@ -19,9 +20,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en"
-      // crosspilot=""
-      >
+    // crosspilot=""
+    >
       <body className={`${cormorant_garamond.variable} ${raleway.variable} antialiased`}>
+        <Navbar />
         {children}
       </body>
     </html>

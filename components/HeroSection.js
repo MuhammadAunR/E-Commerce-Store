@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const HeroSection = () => {
     return (
@@ -9,7 +10,9 @@ const HeroSection = () => {
                     <div className='flex flex-col gap-5 pt-20 pb-10 w-1/2 max-lg:w-full'>
                         <h1 className='font-extrabold text-6xl max-sm:text-5xl uppercase'>Find Clothes <br /> that matches <br /> your style</h1>
                         <p className='w-10/12'>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
-                        <button className='bg-primary text-white px-7 py-3 rounded-full w-48 hover:tracking-widest transition-all ease-in-out'>Shop Now</button>
+                        <Link href={'/shop'}>
+                            <button className='bg-primary text-white px-7 py-3 rounded-full w-48 hover:tracking-widest transition-all ease-in-out'>Shop Now</button>
+                        </Link>
                         <div className='flex space-x-16 space-y-3 max-xl:flex-wrap'>
                             <div>
                                 <div className='text-4xl font-bold'>200+</div>
