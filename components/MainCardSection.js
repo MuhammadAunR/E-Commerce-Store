@@ -3,17 +3,18 @@ import ProductCard from './ProductCard';
 
 const MainCardSection = () => {
     const images = [
-        { path: '/model-1.jpg', alt: 'Denim Jacket', name: 'Denim Jacket', price: '89' },
-        { path: '/model-1.jpg', alt: 'Slim Fit Tee', name: 'Slim Fit Tee', price: '29' },
-        { path: '/model-1.jpg', alt: 'Urban Hoodie', name: 'Urban Hoodie', price: '65' },
-        { path: '/model-1.jpg', alt: 'Casual Shirt', name: 'Casual Shirt', price: '45' },  
+        { path: '/t-shirt-5.jpeg', alt: 'AeroSoft Tee', name: 'AeroSoft Tee', price: '34' },
+        { path: '/jeans-1.jpeg', alt: 'Vintage Blue Jeans', name: 'Vintage Blue Jeans', price: '55' },
+        { path: '/hoodie-3.jpeg', alt: 'UrbanCore Hoodie', name: 'UrbanCore Hoodie', price: '70' },
+        { path: '/jacket-2.png', alt: 'WindBreaker Pro', name: 'WindBreaker Pro', price: '125' },
+
     ];
 
     const images2 = [
-        { path: '/model-2.jpg', alt: 'Leather Jacket', name: 'Leather Jacket', price: '120' },
-        { path: '/model-2.jpg', alt: 'Crewneck Sweater', name: 'Crewneck Sweater', price: '55' },
-        { path: '/model-2.jpg', alt: 'Oversized Tee', name: 'Oversized Tee', price: '32' },
-        { path: '/model-2.jpg', alt: 'Linen Shirt', name: 'Linen Shirt', price: '48' },
+        { path: '/t-shirt-4.jpeg', alt: 'MetroFit Tee', name: 'MetroFit Tee', price: '31' },
+        { path: '/jeans-5.jpeg', alt: 'FlexStretch Jeans', name: 'FlexStretch Jeans', price: '59' },
+        { path: '/hoodie-4.jpeg', alt: 'CloudSoft Hoodie', name: 'CloudSoft Hoodie', price: '68' },
+        { path: '/jacket-1.png', alt: 'AeroShield Jacket', name: 'AeroShield Jacket', price: '110' },
     ];
 
 
