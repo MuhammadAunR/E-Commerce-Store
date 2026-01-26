@@ -183,7 +183,7 @@ const Footer = () => {
 
                                 <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                                     <p className="text-gray-600 text-sm">
-                                        Shop.co © 2000-2023, All Rights Reserved
+                                        Shop.co © 2026, All Rights Reserved
                                     </p>
                                     <div className="flex items-center gap-3">
                                         <div className="w-12 h-8 bg-white rounded border border-gray-200 flex items-center justify-center">
