@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
 
 export async function GET() {
-    const query = 'populate[image][populate]=*&populate[category][populate]=*&populate[variants][populate]=*'
+    const query = 'populate[image][populate]=*&populate[category][populate]=*'
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/products?${query}`,
             {
@@ -15,8 +15,8 @@ export async function GET() {
             throw new Error("Failed to fetch from Strapi")
         }
         const data = await res.json()
-        console.log("Successfully fetched products data")
-        console.log(data)
+        // console.log("Successfully fetched products data")
+        // console.log(data)
         return NextResponse.json(data)
     } catch (error) {
         console.error("Error fetching product data", error)

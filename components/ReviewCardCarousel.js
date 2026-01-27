@@ -1,5 +1,4 @@
 import React from 'react'
-import StarRating from './StarRating';
 import { Check } from 'lucide-react';
 
 const ReviewCardCarousel = ({ current, customerReviews }) => {
@@ -18,7 +17,7 @@ const ReviewCardCarousel = ({ current, customerReviews }) => {
                         {customerReviews.map((item, i) => {
                             return (
                                 <div key={i} className="card flex flex-col gap-1 min-w-96 max-w-96 p-5 ring-1 ring-primary/10 rounded-2xl hover:ring-primary/15 hover:bg-secondary/40 transition-colors ease-in-out cursor-pointer">
-                                    <StarRating />
+                                    
                                     <div className='font-extrabold font-body text-lg flex gap-2'>
                                         <span>
                                             {item.name}

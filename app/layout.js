@@ -1,6 +1,7 @@
 import { Cormorant_Garamond, Raleway } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import Wrapper from "@/components/Wrapper";
+import ProductProvider from "@/components/ProductProvider";
 
 const cormorant_garamond = Cormorant_Garamond({
   variable: "--font-cormorant_garamond",
@@ -23,8 +24,13 @@ export default function RootLayout({ children }) {
     // crosspilot=""
     >
       <body className={`${cormorant_garamond.variable} ${raleway.variable} antialiased`}>
-        <Navbar />
-        {children}
+        
+        <ProductProvider>
+          <Wrapper>
+            {children}
+          </Wrapper>
+        </ProductProvider>
+
       </body>
     </html>
   );

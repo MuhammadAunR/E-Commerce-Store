@@ -3,9 +3,8 @@ import HeroSection from "@/components/HeroSection";
 import MainCardSection from "@/components/MainCardSection";
 import StylesSection from "@/components/StylesSection";
 
-
-
 export default function Home() {
+  
   return (
     <>
       <main>

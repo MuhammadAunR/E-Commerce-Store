@@ -1,7 +1,10 @@
 'use client'
 import ProductCard from '@/components/ProductCard'
+import { ProductContext } from '@/components/ProductProvider';
 import { SlidersHorizontal } from 'lucide-react';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
+
+
 
 const Shop = () => {
 
@@ -9,11 +12,11 @@ const Shop = () => {
     const [applyFilter, setApplyFilter] = useState('Filters')
     const [category, setCategory] = useState()
     const [categoryValue, setCategoryValue] = useState()
-    const [products, setProducts] = useState([])
 
+    const products = useContext(ProductContext)
 
-    const handleChange = (e) => {
-        setCategoryValue(e.target.value)
+    function handleChange(e) {
+        setCategoryValue(e.target.value);
     }
     const handleToggleFilter = () => {
         setToggleFilters(!toggleFilters)
@@ -25,16 +28,6 @@ const Shop = () => {
             setApplyFilter('Apply')
     }
 
-    useEffect(() => {
-        async function fetchProducts() {
-            const res = await fetch('/api/products')
-            const data = await res.json()
-            setProducts(Array.isArray(data?.data) ? data.data : [])
-        }
-        fetchProducts();
-    }, [])
-
-    // console.log('This is shop-page products', products)
 
     return (
         <>

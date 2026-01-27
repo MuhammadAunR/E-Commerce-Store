@@ -1,8 +1,10 @@
+'use client'
 import { Menu, Search, ShoppingCart, UserRound } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({ onClick }) => {
+
     return (
         <>
             <nav className='flex items-center justify-between py-6 max-w-[1600px] mx-auto px-16 max-sm:px-7'>
@@ -41,8 +43,8 @@ const Navbar = () => {
                         <Search className='absolute top-2 left-2 text-primary/50' />
                     </div>
                     <div className='flex items-center gap-5'>
-                        <div><ShoppingCart /></div>
-                        <div className='ring-2 ring-primary rounded-full'><UserRound /></div>
+                        <div onClick={onClick} className='cursor-pointer'><ShoppingCart /></div>
+                        <div className='ring-2 ring-primary rounded-full cursor-pointer'><UserRound size={22} /></div>
                     </div>
                 </section>
             </nav>
