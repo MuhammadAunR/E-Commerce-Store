@@ -16,3 +16,9 @@
   font-family: var(--font-cormorant_garamond), serif;
 }
 
+::-webkit-scrollbar{
+  width: 6px;
+}
+::-webkit-slider-thumb{
+  background-color: black;
+}
