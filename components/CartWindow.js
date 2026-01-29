@@ -7,8 +7,11 @@ import Image from 'next/image'
 
 const CartWindow = ({ isOpen, onClose }) => {
 
-    const { items, removeFromCart } = useContext(CartContext)
+
+    const { items, grandTotal, removeFromCart, checkOut } = useContext(CartContext)
     const strapiURL = process.env.NEXT_PUBLIC_STRAPI_URL;
+
+
 
     return (
         <>
@@ -23,7 +26,7 @@ const CartWindow = ({ isOpen, onClose }) => {
                     {/* Cart Product Card  */}
                     <section className='h-145 overflow-y-scroll'>
                         {items.map((items, i) => {
-                            return <div key={i} className='flex gap-5 bg-gray-100 py-3 px-5 my-1'>
+                            return <div key={i} className='flex gap-5 bg-gray-200 py-3 px-5 my-1 shadow-[0_2px_7px_rgba(0,0,0,0.35)] transition-colors'>
                                 <div className='rounded-full overflow-hidden'>
                                     <Image src={strapiURL + items.image} alt={items.title} width={50} height={50} unoptimized />
                                 </div>
@@ -34,8 +37,9 @@ const CartWindow = ({ isOpen, onClose }) => {
                                             <X size={16} color='red' className='hover:rotate-90 transition-transform ease-linear cursor-pointer' />
                                         </div>
                                     </div>
-                                    <div className='flex'>
-                                        <p>{items.quantity} x </p>
+                                    <div className='flex items-center gap-1'>
+                                        <p>{items.quantity} </p>
+                                        <X size={16} />
                                         <p className='text-red-500'> ${(items.price) * items.quantity}</p>
                                     </div>
                                 </div>
@@ -55,9 +59,9 @@ const CartWindow = ({ isOpen, onClose }) => {
                         <div className='w-full h-px bg-primary'></div>
                         <div className='flex items-center justify-between px-4'>
                             <h3 className='font-semibold text-2xl'>Grand Total</h3>
-                            <p className='font-semibold text-red-500 text-xl'>Price</p>
+                            <p className='font-semibold text-red-500 text-xl'>${grandTotal}</p>
                         </div>
-                        <button className='bg-primary text-white hover:bg-primary/80 rounded-full py-3 transition-colors ease-in-out duration-300 w-50 cursor-pointer transform translate-x-5'>Checkout</button>
+                        <button onClick={checkOut} className='bg-primary text-white hover:bg-primary/80 rounded-full py-3 transition-colors ease-in-out duration-300 w-50 cursor-pointer transform translate-x-5'>Checkout</button>
                     </section>
                 </aside>
             </section>

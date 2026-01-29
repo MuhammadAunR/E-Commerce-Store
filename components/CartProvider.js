@@ -6,6 +6,11 @@ export const CartContext = createContext(null)
 const CartProvider = ({ children }) => {
     const [items, setItems] = useState([])
 
+
+    const grandTotal = items.reduce((total, item) => {
+        return total + item.price * item.quantity
+    }, 0)
+
     const normalizeProduct = (product, qty) => ({
         slug: product.slug,
         title: product.title,
@@ -39,12 +44,14 @@ const CartProvider = ({ children }) => {
         })
         setItems(cart)
     }
-
+    const checkOut = () => {
+        setItems([])
+    }
 
 
     return (
         <>
-            <CartContext.Provider value={{ items, addToCart, removeFromCart }}>
+            <CartContext.Provider value={{ items, grandTotal, addToCart, removeFromCart, checkOut }}>
                 {children}
             </CartContext.Provider>
         </>

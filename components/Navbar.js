@@ -1,9 +1,17 @@
 'use client'
 import { Menu, Search, ShoppingCart, UserRound } from 'lucide-react'
 import Link from 'next/link'
-import React from 'react'
+import React, { useContext } from 'react'
+import { CartContext } from './CartProvider'
 
 const Navbar = ({ onClick }) => {
+
+    const { items } = useContext(CartContext)
+
+    const total = items.reduce((sum, item) => {
+        return sum + item.quantity
+    }, 0)
+
 
     return (
         <>
@@ -43,7 +51,19 @@ const Navbar = ({ onClick }) => {
                         <Search className='absolute top-2 left-2 text-primary/50' />
                     </div>
                     <div className='flex items-center gap-5'>
-                        <div onClick={onClick} className='cursor-pointer'><ShoppingCart /></div>
+                        <div
+                            onClick={onClick}
+                            className="relative cursor-pointer w-6 h-6 flex items-center justify-center"
+                        >
+                            <ShoppingCart className="w-6 h-6" />
+
+                            {total > 0 && (
+                                <span className="absolute -top-2 -right-2 min-w-[18px] h-[18px] px-1 rounded-full bg-primary text-white text-[11px] font-semibold flex items-center justify-center leading-none">
+                                    {total}
+                                </span>
+                            )}
+                        </div>
+
                         <div className='ring-2 ring-primary rounded-full cursor-pointer'><UserRound size={22} /></div>
                     </div>
                 </section>
