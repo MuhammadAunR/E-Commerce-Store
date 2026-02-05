@@ -42,7 +42,7 @@ const ProductDetailCard = ({ product }) => {
 
                         <div className='flex flex-col gap-7 max-lg:gap-3'>
                             <h2 className='font-body font-bold text-3xl sm:text-4xl uppercase'>{product.title}</h2>
-                            <h3 className='font-body font-extrabold text-2xl sm:text-3xl'>${product.price}</h3>
+                            <h3 className='font-body font-extrabold text-red-500 text-2xl sm:text-3xl'>${product.price}</h3>
                             <p className='font-body font-semibold sm:text-lg text-primary/50'>{desc}</p>
                             <div>
                                 <h4 className='font-body font-semibold sm:text-lg text-primary/50'>Category :</h4>

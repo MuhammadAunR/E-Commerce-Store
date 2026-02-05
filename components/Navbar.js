@@ -18,7 +18,6 @@ const Navbar = ({ onClick }) => {
             <nav className='flex items-center justify-between py-6 max-w-[1600px] mx-auto px-16 max-sm:px-7'>
 
                 <section className='flex items-center justify-between gap-10'>
-                    <div className='lg:hidden'><Menu strokeWidth={3} /></div>
                     <Link href={'/'} className="logo text-3xl font-black uppercase font-heading ">Shop.CO</Link>
                     <div className='flex items-center list-none gap-7 text-lg font-body max-lg:hidden'>
                         <Link href={'/shop'}>

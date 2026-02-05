@@ -19,6 +19,7 @@ const Shop = () => {
     const normalized = products.filter(item => {
         return item.category.title === categoryValue
     })
+    console.log(categoryValue)
 
 
     function handleChange(e) {
@@ -38,7 +39,7 @@ const Shop = () => {
 
     return (
         <>
-            <main className="min-h-screen px-16 bg-secondary">
+            <main className="min-h-screen px-16 bg-secondary max-w-[1600px] mx-auto">
                 <section>
                     <header className='flex justify-between items-center'>
                         <div>
@@ -82,9 +83,9 @@ const Shop = () => {
                                 Jackets
                             </label>
 
-                            <label htmlFor="product-casual" className="flex items-center gap-2 cursor-pointer hover:bg-primary/5 py-1 px-2 transition-colors rounded-2xl">
-                                <input type="radio" id="product-casual" name="product" value={'Casual'} onClick={handleChange} />
-                                Casual
+                            <label htmlFor="product-formal" className="flex items-center gap-2 cursor-pointer hover:bg-primary/5 py-1 px-2 transition-colors rounded-2xl">
+                                <input type="radio" id="product-formal" name="product" value={'Formal Shirts'} onClick={handleChange} />
+                                Formal Shirts
                             </label>
                         </div>
                     </div>

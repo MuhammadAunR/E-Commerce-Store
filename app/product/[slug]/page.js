@@ -29,7 +29,7 @@ const ProductDetail = ({ params }) => {
                 <section className='px-16 mt-10 h-fit py-10'>
                     <h2 className='text-4xl font-bold font-body underline'>Other relevant products :</h2>
                     {relatedProducts.length === 0 && <div className='font-body font-semibold text-center p-10 text-xl'>No related product found.</div>}
-                    <div className='py-7 w-fit'>
+                    <div className='py-10 flex items-center justify-center gap-4 flex-wrap'>
                         {relatedProducts.map(item => {
                             return <ProductCard key={item.id} product={item} />
                         })}

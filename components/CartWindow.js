@@ -15,7 +15,7 @@ const CartWindow = ({ isOpen, onClose }) => {
 
     return (
         <>
-            <section className={`fixed top-0 z-10 w-full h-screen bg-black/25 transform transition-transform ease-linear ${isOpen ? 'translate-x-0' : 'translate-x-400'}`}>
+            <section className={`fixed top-0 z-10 w-full h-screen bg-black/25 transform transition-transform ease-linear ${isOpen ? 'translate-x-0' : 'translate-x-800'}`}>
                 <aside className={`fixed top-0 right-0 z-10 w-96 h-screen bg-gray-200`}>
                     <div className='flex items-center justify-between p-4'>
                         <h3 className='uppercase text-2xl font-bold'>Shopping Cart</h3>
