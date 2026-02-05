@@ -1,4 +1,4 @@
-# 🛍️ E-Commerce Store — Frontend (Next.js)
+# 🛍️ Shop.CO / E-Commerce Store — Frontend (Next.js)
 
 This is the frontend of a full-stack e-commerce application built with **Next.js**.  
 It consumes a **Strapi headless CMS API** to display products, categories, and dynamic content.
